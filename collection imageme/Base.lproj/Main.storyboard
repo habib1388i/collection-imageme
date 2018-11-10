@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbj-T0-n7Q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2al-Pu-FOy">
+            <objects>
+                <viewController id="zbj-T0-n7Q" customClass="ViewController" customModule="collection_imageme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZpD-TB-HYG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Obh-X8-GSs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eMP-3T-qIj">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="0qZ-sg-Kmj" customClass="my_cell" customModule="collection_imageme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dms-OI-mTQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dms-OI-mTQ" secondAttribute="trailing" id="6A7-Ma-wo2"/>
+                                            <constraint firstItem="dms-OI-mTQ" firstAttribute="top" secondItem="0qZ-sg-Kmj" secondAttribute="top" id="DCF-Fe-z0z"/>
+                                            <constraint firstAttribute="bottom" secondItem="dms-OI-mTQ" secondAttribute="bottom" id="LFv-a3-7Qg"/>
+                                            <constraint firstItem="dms-OI-mTQ" firstAttribute="leading" secondItem="0qZ-sg-Kmj" secondAttribute="leading" id="le8-vl-WJn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="myImageView" destination="dms-OI-mTQ" id="jBt-kk-Vqe"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="zbj-T0-n7Q" id="LDI-c1-nFl"/>
+                                    <outlet property="delegate" destination="zbj-T0-n7Q" id="yU7-vB-zd6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Obh-X8-GSs" firstAttribute="leading" secondItem="O8y-vd-7oh" secondAttribute="leading" id="Jai-xQ-LW0"/>
+                            <constraint firstItem="Obh-X8-GSs" firstAttribute="trailing" secondItem="O8y-vd-7oh" secondAttribute="trailing" id="RJe-F1-gRb"/>
+                            <constraint firstItem="Obh-X8-GSs" firstAttribute="bottom" secondItem="O8y-vd-7oh" secondAttribute="bottom" id="VDZ-sv-uV5"/>
+                            <constraint firstItem="Obh-X8-GSs" firstAttribute="top" secondItem="ZpD-TB-HYG" secondAttribute="top" id="xH8-AV-j91"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O8y-vd-7oh"/>
+                    </view>
+                    <connections>
+                        <outlet property="myCollecionView" destination="Obh-X8-GSs" id="Ruh-4p-Bmg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbj-p8-YSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616.79999999999995" y="109.29535232383809"/>
+        </scene>
+    </scenes>
+</document>
